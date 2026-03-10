@@ -3,242 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michel Glasse – Bewerbung</title>
+    <title>Michel Glasse</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-brand">Michel Glasse</div>
-        <ul class="nav-links">
-            <li><a href="#ueber-mich">Über mich</a></li>
-            <li><a href="#erfahrung">Erfahrung</a></li>
-            <li><a href="#ausbildung">Ausbildung</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#lebenslauf">Lebenslauf</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Menü öffnen">
-            <span></span><span></span><span></span>
-        </button>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-brand">MG.</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#projects">Projekte</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#career">Werdegang</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="https://catchup.englgroup.de/cu/W3UeNBeh" target="_blank" rel="noopener noreferrer" class="nav-cta">Unterlagen</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menü">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero" id="ueber-mich">
-        <div class="hero-content">
-            <div class="hero-image">
-                <img src="michel%20zurechtgeschnitte.png" alt="Michel Glasse">
-            </div>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-text" aria-hidden="true">GLASSE</div>
+        <div class="container hero-grid">
             <div class="hero-text">
-                <p class="hero-greeting">Hallo, ich bin</p>
-                <h1>Michel Glasse</h1>
-                <p class="hero-subtitle">Kfm. für Digitalisierungsmanagement · Mitgründer &amp; Entwickler</p>
-                <p class="hero-description">
-                    Tiefes Verständnis für digitale Prozessoptimierung und IT-Systemintegration.
-                    Erfahrung in der Konzeption komplexer IT-Projekte, Qualitätsmanagement und technischer Dokumentation –
-                    mit Fokus auf Effizienz und Digitalisierung.
+                <span class="label">Kaufmann für Digitalisierungsmanagement</span>
+                <h1 class="hero-title">
+                    Michel<br><span class="text-accent">Glasse.</span>
+                </h1>
+                <p class="hero-sub">
+                    Digitale Prozesse verstehen, IT-Projekte gestalten und Produkte bauen.
+                    Vom Einkauf über Cyber Security bis zur eigenen Lead-Plattform.
                 </p>
                 <div class="hero-actions">
-                    <a href="Lebenslauf%202025%20MG.pdf" class="btn btn-primary" target="_blank">Lebenslauf ansehen</a>
-                    <a href="#kontakt" class="btn btn-secondary">Kontakt</a>
+                    <a href="#projects" class="btn btn-primary">Projekte ansehen</a>
+                    <a href="#contact" class="btn btn-ghost">Kontakt aufnehmen</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-img-wrap">
+                    <img src="michel%20zurechtgeschnitte.png" alt="Michel Glasse" loading="eager">
                 </div>
             </div>
         </div>
-    </header>
-
-    <!-- Erfahrung / Stationen -->
-    <section class="section" id="erfahrung">
-        <h2 class="section-title">Erfahrung &amp; Stationen</h2>
-        <div class="timeline">
-
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">Aktuell</span>
-                    <h3>Englgroup</h3>
-                    <p class="timeline-role">Mitgründer &amp; Entwickler</p>
-                    <p>Mitgründung und aktive Entwicklung innerhalb des Unternehmens. Verantwortung für technische Umsetzung und strategische Mitgestaltung.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">Seit 04.2025</span>
-                    <h3>Strabag BRVZ GmbH, Köln</h3>
-                    <p class="timeline-role">IT-Einkäufer</p>
-                    <ul class="timeline-list">
-                        <li>Beratung und Beschaffung von IT-Hardware und -Software</li>
-                        <li>Systemgestützte Bestellabwicklung im ITSM-System</li>
-                        <li>Kommunikation und Koordination mit internen IT-Dienstleistern</li>
-                        <li>Qualitätssicherung und Prozessüberwachung im IT-Bereich</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">07.2024 – 03.2025</span>
-                    <h3>DIS AG, Köln</h3>
-                    <p class="timeline-role">IT-Professionell (ANÜ bei STRABAG SE)</p>
-                    <ul class="timeline-list">
-                        <li>Technische Anwenderbetreuung und Incident Management</li>
-                        <li>Unterstützung bei IT-Rollouts und Hardwarebereitstellung</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">09.2020 – 08.2021</span>
-                    <h3>Stadt Köln</h3>
-                    <p class="timeline-role">Bundesfreiwilligendienst</p>
-                    <ul class="timeline-list">
-                        <li>Betreuung und Unterstützung von Senioren im häuslichen Umfeld</li>
-                        <li>Empathische Kommunikation und Organisation sozialer Einsätze</li>
-                    </ul>
-                </div>
-            </div>
-
+        <div class="scroll-hint">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- Ausbildung -->
-    <section class="section section-alt" id="ausbildung">
-        <h2 class="section-title">Ausbildung</h2>
-        <div class="timeline">
-
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">Seit 10.2025</span>
-                    <h3>IU Internationale Hochschule, Köln</h3>
-                    <p class="timeline-role">Bachelor Sc. Cyber Security</p>
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="container">
+            <span class="section-label">ÜBER MICH</span>
+            <h2 class="section-heading">Wer steckt dahinter?</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Ich bin Michel, aufgewachsen in Hürth, ausgebildeter Kaufmann für Digitalisierungsmanagement
+                        und aktuell im Studium der Cyber Security an der IU. Parallel dazu habe ich mit einem Partner
+                        die <strong>EnglGroup GbR Englbrecht & Glasse</strong> gegründet. Eine Lead Performance Plattform, bei der ich
+                        für die technische Umsetzung & Entwicklung verantwortlich bin.
+                    </p>
+                    <p>
+                        Mein Antrieb: digitale Prozesse nicht nur verstehen, sondern aktiv gestalten.
+                        Von der IT-Beschaffung bei der STRABAG über Incident Management bis hin zu eigenen
+                        Softwareprojekten. Ich sehe Probleme als Chancen und baue Lösungen.
+                    </p>
+                </div>
+                <div class="about-traits">
+                    <div class="trait-group">
+                        <span class="trait">🇩🇪 Deutsch – C2</span>
+                        <span class="trait">🇬🇧 Englisch – C1</span>
+                        <span class="trait">🚗 Führerschein B</span>
+                    </div>
+                    <div class="trait-group">
+                        <span class="trait">Eigenverantwortlich</span>
+                        <span class="trait">Lösungsorientiert</span>
+                        <span class="trait">Strukturiert</span>
+                        <span class="trait">Technisch versiert</span>
+                        <span class="trait">Digital affin</span>
+                        <span class="trait">Verlässlich</span>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">09.2021 – 08.2024</span>
-                    <h3>Bochmann und Oborski GmbH, Erftstadt</h3>
-                    <p class="timeline-role">Ausbildung zum Kaufmann für Digitalisierungsmanagement (IHK)</p>
-                    <p>Abschlussnote: 1,8 · Schwerpunkt: IT-Projektmanagement, Prozessoptimierung, ERP-Systeme</p>
+    <!-- Projects -->
+    <section class="section section-dark" id="projects">
+        <div class="container">
+            <span class="section-label">PROJEKTE</span>
+            <h2 class="section-heading">Was ich gebaut habe</h2>
+            <p class="section-sub">Eigene Produkte &amp; Projekte, an denen ich federführend mitgewirkt habe.</p>
+            <div class="projects-grid">
+
+                <a href="https://englgroup.de" target="_blank" rel="noopener noreferrer" class="project-card project-card--featured">
+                    <div class="project-badge">Startup · Aktiv</div>
+                    <h3>EnglGroup – Lead Performance Plattform</h3>
+                    <p>
+                        Mitgründung der EnglGroup GbR Englbrecht &amp; Glasse. Eine Lead Performance Plattform
+                        zur Automatisierung von Vertriebs- und Marketingprozessen. Ich bin verantwortlich für die
+                        komplette technische Umsetzung — von der Architektur über Backend-Logik bis zur Frontend-Entwicklung.
+                    </p>
+                    <div class="project-tags">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>JavaScript</span>
+                        <span>API</span>
+                        <span>SEO</span>
+                        <span>Automatisierung</span>
+                    </div>
+                    <span class="project-link">englgroup.de →</span>
+                </a>
+
+                <div class="project-card project-card--accent">
+                    <div class="project-badge badge-dev">In Entwicklung</div>
+                    <h3>MOKKA – Adaptiver Lead-Scoring-Algorithmus</h3>
+                    <p>
+                        Ein adaptiver Algorithmus, um Leads automatisch zu scoren und Vertriebserfolge messbar zu machen.
+                        Integriert in die EnglGroup-Plattform als Kern-Engine für datengetriebene Entscheidungen.
+                    </p>
+                    <div class="project-tags">
+                        <span>Algorithmus</span>
+                        <span>Lead-Scoring</span>
+                        <span>Datenanalyse</span>
+                        <span>PHP</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">08.2012 – 06.2020</span>
-                    <h3>Albert-Schweitzer-Gymnasium, Hürth</h3>
-                    <p class="timeline-role">Fachhochschulreife</p>
-                    <p>Abschlussnote: 3,3</p>
+                <div class="project-card">
+                    <div class="project-badge">IHK-Abschlussprojekt · 95/100 Punkte</div>
+                    <h3>Chargenmonitor – Dashboard</h3>
+                    <p>
+                        Ein Dashboard zur Überwachung komplexer Chargenzusammenhänge, deren Restlaufzeiten und
+                        der Kalkulation von Überhangsmengen. Mit drei integrierten Unterdashboards:
+                    </p>
+                    <ul class="project-details">
+                        <li>RLZ-Diagramm aller Artikel mit Filtermöglichkeit nach Restlaufzeit</li>
+                        <li>Lagerübersicht mit Filterung nach einzelnen Lagern</li>
+                        <li>Detailansicht mit Prognosenberechnung, Überhangsberechnung &amp; Artikelauflistung</li>
+                    </ul>
+                    <p>Prognosen basierend auf Verkaufsdaten aus SAP Business One, grafisch aufbereitet nach Kategorien.</p>
+                    <div class="project-tags">
+                        <span>SAP B1</span>
+                        <span>Dashboard</span>
+                        <span>Datenanalyse</span>
+                        <span>Prozessoptimierung</span>
+                    </div>
                 </div>
-            </div>
 
+                <div class="project-card">
+                    <div class="project-badge">Erstes Projekt · 2018</div>
+                    <h3>Coved.NET – Minecraft-Netzwerk</h3>
+                    <p>
+                        Programmiertechnische Gestaltung eines Minecraft-Server-Netzwerks mit täglich
+                        mehreren hundert aktiven Spielern. Aufbau mit BungeeCord und Spigot auf Basis von Java,
+                        inklusive komplexer MySQL-Datenbankstrukturen für Spieler- und Servermanagement.
+                    </p>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>MySQL</span>
+                        <span>BungeeCord</span>
+                        <span>Spigot</span>
+                        <span>Servernetzwerk</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <!-- Skills -->
     <section class="section" id="skills">
-        <h2 class="section-title">Technische Kompetenzen</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Programmierung</h3>
-                <div class="skill-tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">PHP</span>
-                    <span class="tag">MySQL</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">Java</span>
+        <div class="container">
+            <span class="section-label">SKILLS</span>
+            <h2 class="section-heading">Was ich mitbringe</h2>
+            <div class="skills-columns">
+                <div class="skill-block">
+                    <h3>Entwicklung</h3>
+                    <div class="skill-pills">
+                        <span>HTML &amp; CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>API-Integration</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-card">
-                <h3>IT-Sicherheit</h3>
-                <div class="skill-tags">
-                    <span class="tag">Backup-Konzepte</span>
-                    <span class="tag">Zugriffskonzepte</span>
-                    <span class="tag">VPN</span>
-                    <span class="tag">Firewall</span>
+                <div class="skill-block">
+                    <h3>IT-Sicherheit</h3>
+                    <div class="skill-pills">
+                        <span>Backup-Konzepte</span>
+                        <span>Zugriffsmanagement</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-card">
-                <h3>Webentwicklung</h3>
-                <div class="skill-tags">
-                    <span class="tag">Webdesign</span>
-                    <span class="tag">UX/UI</span>
-                    <span class="tag">SEO</span>
-                    <span class="tag">Hosting</span>
-                    <span class="tag">API-Integration</span>
+                <div class="skill-block">
+                    <h3>Web &amp; Design</h3>
+                    <div class="skill-pills">
+                        <span>Webdesign</span>
+                        <span>UX / UI</span>
+                        <span>SEO</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-card">
-                <h3>Tools &amp; Software</h3>
-                <div class="skill-tags">
-                    <span class="tag">Microsoft 365</span>
-                    <span class="tag">GitHub</span>
-                    <span class="tag">VS Code</span>
-                    <span class="tag">FileZilla</span>
-                    <span class="tag">Canva</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>Projektmanagement</h3>
-                <div class="skill-tags">
-                    <span class="tag">Agile Methoden</span>
-                    <span class="tag">Confluence</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>Sprachen</h3>
-                <div class="skill-tags">
-                    <span class="tag">Deutsch (C2)</span>
-                    <span class="tag">Englisch (C1)</span>
+                <div class="skill-block">
+                    <h3>Tools &amp; Methoden</h3>
+                    <div class="skill-pills">
+                        <span>Microsoft 365</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                        <span>FileZilla</span>
+                        <span>Canva</span>
+                        <span>Agile Methoden</span>
+                        <span>Confluence</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lebenslauf PDF Einbettung -->
-    <section class="section section-alt" id="lebenslauf">
-        <h2 class="section-title">Lebenslauf</h2>
-        <div class="cv-container">
-            <div class="cv-embed">
-                <iframe src="Lebenslauf%202025%20MG.pdf" title="Lebenslauf Michel Glasse"></iframe>
+    <!-- Career / Werdegang -->
+    <section class="section section-dark" id="career">
+        <div class="container">
+            <span class="section-label">WERDEGANG</span>
+            <h2 class="section-heading">Erfahrung &amp; Ausbildung</h2>
+            <div class="career-grid">
+                <div class="career-col">
+                    <h3 class="career-col-title">Berufserfahrung</h3>
+                    <div class="career-item">
+                        <span class="career-date">Okt 2025 – heute</span>
+                        <h4>EnglGroup GbR Englbrecht &amp; Glasse, Hürth</h4>
+                        <p>Mitgründer · Lead Performance Plattform</p>
+                    </div>
+                    <div class="career-item">
+                        <span class="career-date">Apr 2025 – heute</span>
+                        <h4>Strabag BRVZ GmbH, Köln</h4>
+                        <p>IT-Einkäufer</p>
+                    </div>
+                    <div class="career-item">
+                        <span class="career-date">Jul 2024 – Mär 2025</span>
+                        <h4>DIS AG, Köln</h4>
+                        <p>IT-Professionell (ANÜ bei STRABAG SE)</p>
+                    </div>
+                    <div class="career-item">
+                        <span class="career-date">Sep 2020 – Aug 2021</span>
+                        <h4>Stadt Köln</h4>
+                        <p>Bundesfreiwilligendienst</p>
+                    </div>
+                </div>
+                <div class="career-col">
+                    <h3 class="career-col-title">Ausbildung</h3>
+                    <div class="career-item">
+                        <span class="career-date">Okt 2025 – heute</span>
+                        <h4>IU Internationale Hochschule</h4>
+                        <p>B.Sc. Cyber Security</p>
+                    </div>
+                    <div class="career-item">
+                        <span class="career-date">Sep 2021 – Aug 2024</span>
+                        <h4>Bochmann und Oborski GmbH</h4>
+                        <p>Kfm. für Digitalisierungsmanagement (IHK) · Note 1,8</p>
+                    </div>
+                    <div class="career-item">
+                        <span class="career-date">2012 – 2020</span>
+                        <h4>Albert-Schweitzer-Gymnasium, Hürth</h4>
+                        <p>Fachhochschulreife</p>
+                    </div>
+                    <h3 class="career-col-title" style="margin-top: 2rem;">Weiterbildungen</h3>
+                    <div class="career-item">
+                        <span class="career-date">2022 – 2023</span>
+                        <h4>Zertifizierungen</h4>
+                        <p>Fitnesstrainer A, B &amp; Personal Trainer · Online-Marketing &amp; SEO · SAP Business One</p>
+                    </div>
+                </div>
             </div>
-            <a href="Lebenslauf%202025%20MG.pdf" class="btn btn-primary cv-download" download target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Lebenslauf herunterladen
-            </a>
         </div>
     </section>
 
-    <!-- Kontakt -->
-    <section class="section" id="kontakt">
-        <h2 class="section-title">Kontakt</h2>
-        <div class="contact-grid contact-grid--single">
-            <a href="mailto:michelglasse@outlook.de" class="contact-card">
-                <div class="contact-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="container contact-container">
+            <span class="section-label">KONTAKT</span>
+            <h2 class="section-heading">Let's talk.</h2>
+            <p class="section-sub">Ich freue mich auf deine Nachricht.</p>
+            <div class="contact-card">
+                <div class="contact-img">
+                    <img src="michel%20zurechtgeschnitte.png" alt="Michel Glasse">
                 </div>
-                <h3>E-Mail</h3>
-                <p>michelglasse@outlook.de</p>
-            </a>
+                <div class="contact-info">
+                    <h3>Michel Glasse</h3>
+                    <p class="contact-role">Kaufmann für Digitalisierungsmanagement · Mitgründer · Cyber-Security-Student</p>
+                    <div class="contact-links">
+                        <a href="mailto:michelglasse@outlook.de">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            michelglasse@outlook.de
+                        </a>
+                    </div>
+                    <div class="contact-cta">
+                        <a href="https://catchup.englgroup.de/cu/W3UeNBeh" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Lebenslauf herunterladen
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 Michel Glasse. Alle Rechte vorbehalten.</p>
+        <div class="container footer-inner">
+            <p>&copy; 2026 Michel Glasse</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

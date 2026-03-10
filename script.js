@@ -1,13 +1,12 @@
-// Mobile Navigation Toggle
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+// Mobile Navigation
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
 
 navToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     navToggle.classList.toggle('open');
 });
 
-// Close mobile nav on link click
 navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -15,39 +14,43 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Navbar background on scroll
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.style.borderBottomColor = 'rgba(79, 140, 255, 0.15)';
-    } else {
-        navbar.style.borderBottomColor = '';
-    }
-});
+// Scroll Reveal (Intersection Observer)
+const revealElements = document.querySelectorAll('.section');
 
-// Smooth reveal on scroll (Intersection Observer)
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+            revealObserver.unobserve(entry.target);
         }
     });
-}, observerOptions);
-
-document.querySelectorAll('.section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
+}, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
 });
 
-// Add visible style
-const style = document.createElement('style');
-style.textContent = `.section.visible { opacity: 1 !important; transform: translateY(0) !important; }`;
-document.head.appendChild(style);
+revealElements.forEach(el => {
+    el.classList.add('reveal');
+    revealObserver.observe(el);
+});
+
+// Active nav link on scroll
+const sections = document.querySelectorAll('.section, .hero');
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navAnchors.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + current) {
+            a.classList.add('active');
+        }
+    });
+});
